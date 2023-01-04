@@ -10,27 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_30_021349) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_04_021055) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "datalogs", force: :cascade do |t|
     t.string "datalog_name"
-    t.decimal "time", precision: 7, scale: 2
-    t.decimal "af_correction_1", precision: 4, scale: 2
-    t.decimal "af_learning_1", precision: 4, scale: 2
-    t.decimal "accel_position", precision: 4, scale: 2
-    t.decimal "boost_extended", precision: 4, scale: 2
+    t.decimal "time", precision: 7, scale: 3
+    t.decimal "af_correction_1", precision: 7, scale: 3
+    t.decimal "af_learning_1", precision: 7, scale: 3
+    t.decimal "accel_position", precision: 7, scale: 3
+    t.decimal "boost_extended", precision: 7, scale: 3
     t.integer "dyn_adv_mult"
-    t.decimal "fine_knock_learn", precision: 4, scale: 2
+    t.decimal "fine_knock_learn", precision: 7, scale: 3
     t.integer "gear_position"
-    t.decimal "maf_corr_final", precision: 4, scale: 2
+    t.decimal "maf_corr_final", precision: 7, scale: 3
     t.integer "oil_temp"
     t.integer "rpm"
     t.integer "throttle_pos"
     t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
