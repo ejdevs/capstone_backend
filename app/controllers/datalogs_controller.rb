@@ -1,7 +1,7 @@
 class DatalogsController < ApplicationController
   def index
     datalogs = Datalog.all
-    # datalogs.update_all(user_id: 1, datalog_name: "datalog112", created_at: Date.new, updated_at: Date.new)
+    # datalogs.update_all(user_id: 1, datalog_name: "datalog112-45sec", created_at: Date.current, updated_at: Date.current)
     render json: datalogs.as_json
   end
 
