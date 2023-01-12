@@ -1,7 +1,7 @@
 class DatalogsController < ApplicationController
   def index
     datalogs = Datalog.all
-    # datalogs.update_all(user_id: 1, datalog_name: "datalog112-45sec", created_at: Date.current, updated_at: Date.current)
+    # datalogs.update_all(user_id: 1, datalog_name: "datalog", created_at: Date.current, updated_at: Date.current)
     render json: datalogs.as_json
   end
 
@@ -23,11 +23,8 @@ class DatalogsController < ApplicationController
       user_id: current_user.id,
     )
     if datalog.save
-      # happy path! Yay, it saved
-
       render json: datalog.as_json
     else
-      # sad path! It didn't save, boo
       render json: { errors: datalog.errors.full_messages }, status: 422
     end
   end
