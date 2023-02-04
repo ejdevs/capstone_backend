@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_04_021055) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_04_222807) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_04_021055) do
     t.decimal "af_learning_1", precision: 7, scale: 3
     t.decimal "accel_position", precision: 7, scale: 3
     t.decimal "boost_extended", precision: 7, scale: 3
-    t.integer "dyn_adv_mult"
+    t.decimal "dyn_adv_mult", precision: 7, scale: 3
     t.decimal "fine_knock_learn", precision: 7, scale: 3
     t.integer "gear_position"
     t.decimal "maf_corr_final", precision: 7, scale: 3
