@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_04_222807) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_04_231941) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,25 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_04_222807) do
     t.integer "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal "af_sens_1_ratio", precision: 7, scale: 3
+    t.decimal "baro_pressure", precision: 7, scale: 3
+    t.decimal "cl_fuel_target", precision: 7, scale: 3
+    t.decimal "calculated_load", precision: 7, scale: 3
+    t.decimal "comm_fuel_final", precision: 7, scale: 3
+    t.integer "coolant_temp"
+    t.decimal "feedback_knock", precision: 7, scale: 3
+    t.integer "fuel_pressure"
+    t.integer "fuel_pressure_target"
+    t.decimal "ignition_timing", precision: 7, scale: 3
+    t.decimal "inj_duty_cycle", precision: 7, scale: 3
+    t.decimal "intake_temp", precision: 7, scale: 3
+    t.decimal "intake_temp_manifold", precision: 7, scale: 3
+    t.decimal "maf_volts", precision: 7, scale: 3
+    t.decimal "req_torque", precision: 7, scale: 3
+    t.decimal "td_boost_error_ext", precision: 7, scale: 3
+    t.decimal "tgv_map_ratio", precision: 7, scale: 3
+    t.decimal "wastegate_duty", precision: 7, scale: 3
+    t.text "ap_info"
   end
 
   create_table "users", force: :cascade do |t|
